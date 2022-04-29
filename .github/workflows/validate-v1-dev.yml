@@ -37,7 +37,7 @@ jobs:
 
       - name: Validate CTS API V1 (API Key)
         env: # Or as an environment variable
-          API_KEY: ${{ secrets.API_KEY }}
+          API_KEY: ${{ secrets.API_KEY_DEVELOPMENT }}
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
           CTS_API_URL: ${{ secrets.CTS_API_URL_DEVELOPMENT }}
         run: |

@@ -80,3 +80,6 @@ for i in range(0, 6):
 for i in range(0, 6):
     size = (i * 10**i) + 1
     execute_get(url + 'biomarkers?size=%s' % size, headers, size > 200)
+
+# Test 8
+execute_get(url + 'docs', headers, False)

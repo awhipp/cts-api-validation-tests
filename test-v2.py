@@ -13,7 +13,7 @@ if 'API_KEY' in os.environ:
 else:
     headers['Origin'] = os.environ['TESTING_ORIGIN']
 
-email = os.environ['USER_EMAIL']
+# email = os.environ['USER_EMAIL']
 headers['Content-Type'] = 'application/json'
 
 @retry(stop_max_attempt_number=5, wait_random_min=1000, wait_random_max=5000)
@@ -57,9 +57,9 @@ for i in range(0, 6):
     execute_get(url + 'trials?size=%s' % (size), headers, size > 50)
 
 # Test 3 (no fail)
-for i in range(0, 6):
-    size = (i * 10**i) + 1
-    execute_get(url + 'trials?size=%s&export=json&email=%s' % (size, email), headers, False)
+# for i in range(0, 6):
+#     size = (i * 10**i) + 1
+    # execute_get(url + 'trials?size=%s&export=json&email=%s' % (size, email), headers, False)
 
 # Test 4 (max of 50000)
 for i in range(0, 6):

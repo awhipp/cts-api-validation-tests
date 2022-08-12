@@ -13,7 +13,6 @@ if 'API_KEY' in os.environ:
 else:
     headers['Origin'] = os.environ['TESTING_ORIGIN']
 
-email = os.environ['USER_EMAIL']
 headers['Content-Type'] = 'application/json'
 
 @retry(stop_max_attempt_number=5, wait_random_min=1000, wait_random_max=5000)
